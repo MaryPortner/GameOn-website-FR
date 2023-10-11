@@ -22,7 +22,6 @@ icon.addEventListener("click", () =>{
 });
 
 
-
 //Closing modal
 btnClose.addEventListener("click", () =>{
   modalbg.style.display = "none";
