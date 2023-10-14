@@ -16,15 +16,15 @@ function firstNameValidation(e){
     if(firstName === false){
         e.preventDefault();
         error.setAttribute('data-error-visible', 'true');
-        console.log("Le formulaire n'est pas envoyé ! ");
+        console.log("Le champ n'est pas valide !");
     }else {
         error.setAttribute('data-error-visible', 'false');
-        console.log("Le formulaire est envoyé ! ");
+        console.log("Le champ est valide ! ");
     }
 }   
 
 function showValidation(){
-    
+
 }
     
 function lastValidation(e){
@@ -33,10 +33,10 @@ function lastValidation(e){
     if(last === false){
         e.preventDefault();
         error.setAttribute('data-error-visible', 'true');
-        console.log("Le formulaire n'est pas envoyé ! ");
+        console.log("Le champ n'est pas valide !");
     }else {
         error.setAttribute('data-error-visible', 'false');
-        console.log("Le formulaire est envoyé ! ");
+        console.log("Le champ est valide ! ");
     }
 }   
 
@@ -47,11 +47,11 @@ function emailValidation(e){
     if(email === false){
         e.preventDefault();
         error.setAttribute('data-error-visible', 'true');
-        console.log("Le formulaire n'est pas envoyé ! ");
+        console.log("Le champ n'est pas valide !");
         
     }else {
         error.setAttribute('data-error-visible', 'false');
-        console.log("Le formulaire est envoyé ! ");
+        console.log("Le champ est valide !");
     }
 }   
 
@@ -62,10 +62,10 @@ function birthdayValidation(e){
     if(birthday === false){
         e.preventDefault();
         error.setAttribute('data-error-visible', 'true');
-        console.log("Le formulaire n'est pas envoyé ! ");
+        console.log("Le champ n'est pas valide !");
     }else {
         error.setAttribute('data-error-visible', 'false');
-        console.log("Le formulaire est envoyé ! ");
+        console.log("Le champ est valide !")
     }
 }   
 
@@ -76,10 +76,10 @@ function tournoisValidation(e){
     if(tournois === false){
         e.preventDefault();
         error.setAttribute('data-error-visible', 'true');
-        console.log("Le formulaire n'est pas envoyé ! ");
+        console.log("Le champ n'est pas valide !");
     }else {
         error.setAttribute('data-error-visible', 'false');
-        console.log("Le formulaire est envoyé ! ");
+        console.log("Le champ est valide !");
     }
 }  
 
