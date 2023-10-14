@@ -177,6 +177,7 @@ input {
   border: 0.8px solid #ccc;
   outline: none;
 }
+
 .text-control {
   margin: 0;
   padding: 8px;
@@ -187,11 +188,14 @@ input {
 }
 .formData[data-error]::after {
   content: attr(data-error);
-  font-size: 0.4em;
+  font-size: 0.50em;
   color: #e54858;
   display: block;
-  margin-top: 7px;
+  word-wrap: break-word;
+  padding-bottom: 3px;
+  margin-top: 10px;
   margin-bottom: 7px;
+  margin-left: -10px;
   text-align: right;
   line-height: 0.3;
   opacity: 0;
@@ -201,14 +205,14 @@ input {
   opacity: 1;
 }
 .formData[data-error-visible="true"] .text-control {
-  border: 2px solid #e54858;
+  border: 3px solid #e54858;
 }
-/* 
+
 input[data-error]::after {
     content: attr(data-error);
     font-size: 0.4em;
     color: red;
-} */
+}
 .checkbox-label,
 .checkbox2-label {
   position: relative;
@@ -592,6 +596,11 @@ footer {
     min-width: inherit;
     font-size: 1.3rem;
   }
+
+  .formData[data-error]::after {
+    line-height: 0.9;
+ 
+  }
 } 
 
 @media screen and (max-width: 360px) {
@@ -608,7 +617,6 @@ footer {
   h1.hero-headline{
     font-size: 2.3rem;
   }
-
 } 
 
 @keyframes modalopen {
