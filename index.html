@@ -60,7 +60,7 @@
           <span class="close"></span>
 
           <div class="modal-body">
-            <form name="reserve" action="index.html"  method="get" ">
+            <form name="reserve" action="index.html"  onsubmit="confirmSendingForm();" method="get">
 
               <div class="formData firstName" data-error="Veuillez entrer 2 caractères ou plus pour le champ prénom" data-error-visible="false">
                 <label for="firstName">Prénom</label>
@@ -155,6 +155,18 @@
           </div>
         </div>
       </div>
+
+
+      <div class=" modalConfirmSending content">
+        <span class="modalConfirmSending-close"></span>
+        <p class="modalConfirmSending__txt">
+          Merci pour votre inscription
+        </p>
+        <button class="button btn-submit modalConfirmSending__btn">
+          Fermer
+        </button>
+      </div>
+
     </main>
 
     <footer>

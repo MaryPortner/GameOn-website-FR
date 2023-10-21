@@ -9,6 +9,7 @@ const form = document.querySelector('form');
 // On récupère les données du formulaire
 const inputDataEnter = form.querySelectorAll(".formData input[data-enter]");
 
+
 //***************/factorisation du test de validation *************/
 
 function showValidation(validationCondition, error){
@@ -73,19 +74,27 @@ function tournamentCity(){
 
 
 
+
+//*************** soumission du formulaire  *************/
 form.addEventListener("submit", (e) => {
     // preventDefault pour éviter la soumission du formulaire et que les données
     e.preventDefault();
-
-    acceptTerm();
-    birthdayValidation();
-    emailValidation();
-    firstNameValidation();
-    lastValidation();
-    numberTournamentValidation();
-    tournamentCity();
-    
+        acceptTerm();
+        birthdayValidation();
+        emailValidation();
+        firstNameValidation();
+        lastValidation();
+        numberTournamentValidation();
+        tournamentCity();
+ 
 });
+
+
+
+
+
+
+
 
 
 
