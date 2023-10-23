@@ -2,26 +2,43 @@
  * Validation du formulaire au submit
  */
 
+    //On récupère notre formulaire
+    const form = document.querySelector('form');
+    console.log(form);
+    // On récupère les données du formulaire
+    const inputDataEnter = form.querySelectorAll(".formData input[data-enter]");
+    // const dataValid = form.querySelector('data-valid');
+    // console.log(dataValid);
+    let sendValid = true;
 
-//On récupère notre formulaire
-const form = document.querySelector('form');
-
-// On récupère les données du formulaire
-const inputDataEnter = form.querySelectorAll(".formData input[data-enter]");
-
+form.addEventListener("submit", (e) => {
 
 //***************/factorisation du test de validation *************/
+
+   e.preventDefault();
+
+    acceptTerm();
+    birthdayValidation();
+    emailValidation();
+    firstNameValidation();
+    lastValidation();
+    numberTournamentValidation();
+    tournamentCity();
+
+    if(sendValid === true){
+        confirmSendingForm();
+    }
+});
+
 
 function showValidation(validationCondition, error){
     if(validationCondition){
         error.setAttribute('data-error-visible', 'false');
-        console.log("Le champ est valide ! ");
     }else {
         error.setAttribute('data-error-visible', 'true');
-        console.log("Le champ n'est pas valide !");
+        sendValid = false;
     }
 }
-
 
 //*************** fonctionsde validation des conditions d'utilisation *************/
 function acceptTerm(){
@@ -29,7 +46,6 @@ function acceptTerm(){
     const inputCheckbox = document.querySelector("#checkbox1");
     showValidation(inputCheckbox.checked == true, error);
 }
-
 
 //***************** fonctions de validation des données personnelles ***************/
 function birthdayValidation(){
@@ -71,31 +87,4 @@ function tournamentCity(){
     const inputsRadio = document.querySelectorAll('input[type=radio]:checked');
     showValidation(inputsRadio.length > 0, error);
 }
-
-
-
-
-//*************** soumission du formulaire  *************/
-form.addEventListener("submit", (e) => {
-    // preventDefault pour éviter la soumission du formulaire et que les données
-    e.preventDefault();
-        acceptTerm();
-        birthdayValidation();
-        emailValidation();
-        firstNameValidation();
-        lastValidation();
-        numberTournamentValidation();
-        tournamentCity();
- 
-});
-
-
-
-
-
-
-
-
-
-
 
