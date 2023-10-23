@@ -30,7 +30,7 @@ img {
   padding-right: 1rem;
 }
 
-.topnav {
+.topnav, .topnavresponsive {
   overflow: hidden;
   margin: 3.5%;
   display: flex;

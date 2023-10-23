@@ -1,9 +1,10 @@
 // DOM Elements
 const btnClose = document.querySelector(".close");
+const formData = document.querySelectorAll(".formData");
 const getForm = document.querySelector("form");
 const getFormOnsubmit = getForm.querySelector("onsubmit");
 const icon = document.querySelector(".icon");
-const mainNavbarResponsive = document.querySelector(" #myTopnav .main-navbar").firstElementChild;
+const mainNavbarResponsive = document.querySelector("#myTopnav .main-navbar").firstElementChild;
 const modalbg = document.querySelector(".bground");
 const modalBtn = document.querySelectorAll(".modal-btn");
 const modalConfirmSending = document.querySelector(".modalConfirmSending");
@@ -16,25 +17,11 @@ const bgroundHeroSection = document.querySelector(".bground");
 function editNav() {
   var x = document.getElementById("myTopnav");
   if (x.className === "topnav") {
-    x.className += "responsive";
+    x.className += " responsive";
   } else {
     x.className = "topnav";
   }
 }
-
-// add margin-top on menu responsive
-icon.addEventListener("click", () =>{
-  mainNavbarResponsive.classList.add("main-navbarResponsive");
-});
-
-
-//Closing form
-btnClose.addEventListener("click", () =>{
-  modalbg.style.display = "none";
-});
-
-
-
 
 // launch modal event
 modalBtn.forEach((btn) => btn.addEventListener("click", launchModal));
@@ -44,6 +31,23 @@ function launchModal() {
   modalbg.style.display = "block";
 }
 
+// add margin-top on menu responsive
+icon.addEventListener("click", () =>{
+  mainNavbarResponsive.classList.add("main-navbarResponsive");
+});
+
+//Closing form
+btnClose.addEventListener("click", () =>{
+  modalbg.style.display = "none";
+});
+
+
+function closeModalSendingConfirmation(){
+  modalConfirmSending.style.display = "none";
+  heroSection.style.display = "grid";
+  bgroundHeroSection.style.visibility = "block";
+  modalbg.style.display = "none";
+}
 
 function confirmSendingForm(){
   modalConfirmSending.style.display = "flex";
@@ -54,20 +58,10 @@ function confirmSendingForm(){
 
 // Closing sending confirmation
 modalConfirmSendingClose.addEventListener("click", () =>{
-  modalConfirmSending.style.display = "none";
-  heroSection.style.display = "grid";
-  bgroundHeroSection.style.visibility = "block";
-  modalbg.style.display = "none";
+  closeModalSendingConfirmation();
 });
 
 // Closing sending confirmation with button close
 modalConfirmSendingBtn.addEventListener("click", () =>{
-  modalConfirmSending.style.display = "none";
-  heroSection.style.display = "grid";
-  bgroundHeroSection.style.display = "block";
-  modalbg.style.display = "none";
+  closeModalSendingConfirmation();
 });
-
-
-// getForm.addEventListener("submit", confirmSendingForm());
-// Showing registration confirmation upon form submission
