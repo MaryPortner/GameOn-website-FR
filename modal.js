@@ -49,13 +49,13 @@ function confirmSendingForm(){
   modalConfirmSending.style.display = "flex";
   heroSection.style.display = "none";
   bgroundHeroSection.style.display = "none";
-  getForm.reset();
+  
 }
 
 // Closing sending confirmation
 modalConfirmSendingClose.addEventListener("click", () =>{
   modalConfirmSending.style.display = "none";
-  heroSection.style.display = "block";
+  heroSection.style.display = "grid";
   bgroundHeroSection.style.visibility = "block";
   modalbg.style.display = "none";
 });
@@ -63,7 +63,7 @@ modalConfirmSendingClose.addEventListener("click", () =>{
 // Closing sending confirmation with button close
 modalConfirmSendingBtn.addEventListener("click", () =>{
   modalConfirmSending.style.display = "none";
-  heroSection.style.display = "block";
+  heroSection.style.display = "grid";
   bgroundHeroSection.style.display = "block";
   modalbg.style.display = "none";
 });
