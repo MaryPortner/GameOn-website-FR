@@ -58,9 +58,9 @@
       <div class="bground">
         <div class="content">
           <span class="close"></span>
-
+          <!-- onsubmit="return showValidation(validationCondition, error)" -->
           <div class="modal-body">
-            <form name="reserve" action="index.html"  onsubmit="confirmSendingForm();" method="get">
+            <form name="reserve" action="index.html" validation="false" onsubmit="false" method="get">
 
               <div class="formData firstName" data-error="Veuillez entrer 2 caractères ou plus pour le champ prénom" data-error-visible="false">
                 <label for="firstName">Prénom</label>

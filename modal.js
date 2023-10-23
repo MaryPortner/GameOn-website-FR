@@ -1,7 +1,7 @@
 // DOM Elements
 const btnClose = document.querySelector(".close");
-const formData = document.querySelectorAll(".formData");
 const getForm = document.querySelector("form");
+const getFormOnsubmit = getForm.querySelector("onsubmit");
 const icon = document.querySelector(".icon");
 const mainNavbarResponsive = document.querySelector(" #myTopnav .main-navbar").firstElementChild;
 const modalbg = document.querySelector(".bground");
@@ -33,21 +33,6 @@ btnClose.addEventListener("click", () =>{
   modalbg.style.display = "none";
 });
 
-// Closing sending confirmation
-modalConfirmSendingClose.addEventListener("click", () =>{
-    modalConfirmSending.style.display = "none";
-    heroSection.style.display = "block";
-    bgroundHeroSection.style.visibility = "block";
-    modalbg.style.display = "none";
-});
-
-// Closing sending confirmation with button close
-modalConfirmSendingBtn.addEventListener("click", () =>{
-  modalConfirmSending.style.display = "none";
-  heroSection.style.display = "block";
-  bgroundHeroSection.style.display = "block";
-  modalbg.style.display = "none";
-});
 
 
 
@@ -66,6 +51,23 @@ function confirmSendingForm(){
   bgroundHeroSection.style.display = "none";
   getForm.reset();
 }
+
+// Closing sending confirmation
+modalConfirmSendingClose.addEventListener("click", () =>{
+  modalConfirmSending.style.display = "none";
+  heroSection.style.display = "block";
+  bgroundHeroSection.style.visibility = "block";
+  modalbg.style.display = "none";
+});
+
+// Closing sending confirmation with button close
+modalConfirmSendingBtn.addEventListener("click", () =>{
+  modalConfirmSending.style.display = "none";
+  heroSection.style.display = "block";
+  bgroundHeroSection.style.display = "block";
+  modalbg.style.display = "none";
+});
+
 
 // getForm.addEventListener("submit", confirmSendingForm());
 // Showing registration confirmation upon form submission
