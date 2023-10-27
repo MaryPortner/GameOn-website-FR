@@ -14,7 +14,7 @@ body {
   margin: 0;
   display: flex;
   flex-direction: column;
-  /* background-image: url("background.png"); */
+  background-image: url("background.png");
   font-family: var(--font-default);
   font-size: 18px;
   max-width: 1300px;
@@ -550,7 +550,7 @@ footer {
   }
   .hero-section > .btn-signup {
     display: block;
-    margin: 32px auto 10px;
+    margin: 72px auto 10px;
     padding: 12px 35px;
   }
   .copyrights {
@@ -587,6 +587,9 @@ footer {
     display: block;
     text-align: left;
   }
+  .hero-section{
+    grid-template-columns: inherit;
+  }
 
   h1.hero-headline{
     font-size: 2.6rem;
@@ -609,9 +612,12 @@ footer {
     float: right;
     display: block;
   }
+  .main{
+    width: 100%;
+  }
   .hero-content{
     padding-left: 0;
-    max-width: 320px;
+    max-width: 290px;
   }
   h1.hero-headline{
     font-size: 2.3rem;
@@ -621,18 +627,35 @@ footer {
     font-size: 1.3rem;
   }
 
+  .btn-signup {
+    font-size: 1.2rem;
+  }
+
+  .hero-section > .btn-signup {
+    width: 178px;
+  }
   .formData[data-error]::after {
     line-height: 0.9;
- 
+  }
+
+  .modalConfirmSending__txt {
+    font-size: 26px;
+  }
+  .modalConfirmSending__btn {
+    top: 300px;
   }
 } 
+
+@media screen and (max-width: 390px) {
+
+
+}
 
 @media screen and (max-width: 360px) {
   .main-navbar {
     width: 80%;
     margin-left: 10%;
   }
-
   .hero-content{
     padding-left: 0;
     min-width: inherit;
@@ -641,6 +664,10 @@ footer {
   h1.hero-headline{
     font-size: 2.3rem;
   }
+  .modalConfirmSending__btn {
+    top: 280px;
+  }
+
 } 
 
 @keyframes modalopen {

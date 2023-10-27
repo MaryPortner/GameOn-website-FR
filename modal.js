@@ -42,14 +42,6 @@ btnClose.addEventListener("click", () =>{
 });
 
 
-function confirmSendingForm(){
-  modalConfirmSending.style.display = "flex";
-  heroSection.style.display = "none";
-  bgroundHeroSection.style.display = "none";
-  getForm.reset();
-  
-}
-
 function closeModalSendingConfirmation(){
   modalConfirmSending.style.display = "none";
   heroSection.style.display = "grid";
@@ -57,7 +49,13 @@ function closeModalSendingConfirmation(){
   modalbg.style.display = "none";
 }
 
-
+function confirmSendingForm(){
+  modalConfirmSending.style.display = "flex";
+  heroSection.style.display = "none";
+  bgroundHeroSection.style.display = "none";
+  getForm.reset();
+  
+}
 
 // Closing sending confirmation
 modalConfirmSendingClose.addEventListener("click", () =>{
