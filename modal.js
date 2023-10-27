@@ -53,6 +53,7 @@ function confirmSendingForm(){
   modalConfirmSending.style.display = "flex";
   heroSection.style.display = "none";
   bgroundHeroSection.style.display = "none";
+  getForm.reset();
   
 }
 
