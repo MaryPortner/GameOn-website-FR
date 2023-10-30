@@ -31,15 +31,27 @@ function launchModal() {
   modalbg.style.display = "block";
 }
 
+//Closing form
+btnClose.addEventListener("click", () =>{
+  modalbg.style.display = "none";
+});
+
+
 // add margin-top on menu responsive
 icon.addEventListener("click", () =>{
   mainNavbarResponsive.classList.add("main-navbarResponsive");
 });
 
-//Closing form
-btnClose.addEventListener("click", () =>{
-  modalbg.style.display = "none";
+// Closing sending confirmation with button close
+modalConfirmSendingBtn.addEventListener("click", () =>{
+  closeModalSendingConfirmation();
 });
+
+// Closing sending confirmation
+modalConfirmSendingClose.addEventListener("click", () =>{
+  closeModalSendingConfirmation();
+});
+
 
 
 function closeModalSendingConfirmation(){
@@ -56,13 +68,3 @@ function confirmSendingForm(){
   getForm.reset();
   
 }
-
-// Closing sending confirmation
-modalConfirmSendingClose.addEventListener("click", () =>{
-  closeModalSendingConfirmation();
-});
-
-// Closing sending confirmation with button close
-modalConfirmSendingBtn.addEventListener("click", () =>{
-  closeModalSendingConfirmation();
-});
