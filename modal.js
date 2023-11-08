@@ -1,8 +1,10 @@
 // DOM Elements
+const body = document.querySelector(".body-main");
 const btnClose = document.querySelector(".close");
 const formData = document.querySelectorAll(".formData");
 const getForm = document.querySelector("form");
 const getFormOnsubmit = getForm.querySelector("onsubmit");
+const heroSection = document.querySelector("div.hero-section");
 const icon = document.querySelector(".icon");
 const mainNavbarResponsive = document.querySelector("#myTopnav .main-navbar").firstElementChild;
 const modalbg = document.querySelector(".bground");
@@ -10,8 +12,6 @@ const modalBtn = document.querySelectorAll(".modal-btn");
 const modalConfirmSending = document.querySelector(".modalConfirmSending");
 const modalConfirmSendingBtn = document.querySelector(".modalConfirmSending__btn");
 const modalConfirmSendingClose = document.querySelector(".modalConfirmSending-close");
-const heroSection = document.querySelector("div.hero-section");
-const bgroundHeroSection = document.querySelector(".bground");
 
 
 function editNav() {
@@ -57,14 +57,15 @@ modalConfirmSendingClose.addEventListener("click", () =>{
 function closeModalSendingConfirmation(){
   modalConfirmSending.style.display = "none";
   heroSection.style.display = "grid";
-  bgroundHeroSection.style.visibility = "block";
+  modalbg.style.visibility = "block";
   modalbg.style.display = "none";
+  body.style.backgroundColor = "";
 }
 
 function confirmSendingForm(){
   modalConfirmSending.style.display = "flex";
-  heroSection.style.display = "none";
-  bgroundHeroSection.style.display = "none";
+  modalbg.style.display = "none";
+  body.style.backgroundColor = "rgba(26, 39, 156, 0.4)";
   getForm.reset();
   
 }

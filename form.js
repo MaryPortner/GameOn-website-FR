@@ -9,7 +9,7 @@ const form = document.querySelector('form');
 const inputDataEnter = form.querySelectorAll(".formData input[data-enter]");
 
 //variable 
-let sendValid = true;
+let sendValid;
 
 function testValidation(){
     sendValid = true;
@@ -26,9 +26,7 @@ function testValidation(){
 form.addEventListener("submit", (e) => {
 
     e.preventDefault();
-
-    testValidation()
-
+    testValidation();
     if(sendValid){
         confirmSendingForm();
     }
